@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class UgandaCounter {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter book description: ");
+        String text = input.nextLine().toLowerCase();
+        
+        int count = 0;
+        int index = text.indexOf("uganda");
+        
+        while (index != -1) {
+            count++;
+            index = text.indexOf("uganda", index + 1);
+        }
+        
+        System.out.println("Occurrences of 'Uganda': " + count);
+        input.close();
+    }
+}
